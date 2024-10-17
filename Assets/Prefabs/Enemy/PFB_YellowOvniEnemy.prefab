@@ -172,3 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 15
+  explosionPrefab: {fileID: 3197195793116643709, guid: d72f76c1dc1014a459f1804d1e8271b0, type: 3}
+  loots:
+  - {fileID: 2896321011889692577, guid: cb7f4a05738678f48a47d1985fe23bad, type: 3}
+  - {fileID: 2683880657365375803, guid: c2c7b411834bb474dbfc9d54c2c05522, type: 3}
+  - {fileID: 726843750662735034, guid: 77bb059e5634b1141b8aaf5874aa9101, type: 3}

@@ -5,6 +5,7 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] protected int baseHealth;
     [SerializeField] protected GameObject explosionPrefab;
+    [SerializeField] protected GameObject[] loots;
     
     private int _currentHealth;
 
@@ -26,6 +27,16 @@ public class EnemyBase : MonoBehaviour
     {
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, 0.5f);
+        DropLoot();
         Destroy(gameObject);
+    }
+
+    protected void DropLoot()
+    {
+        if (loots.Length > 0)
+        {
+            int randomIndex = Random.Range(0, loots.Length);
+            Instantiate(loots[randomIndex], transform.position, Quaternion.identity);
+        }
     }
 }
